@@ -1,0 +1,10 @@
+buildscript {
+    repositories { google(); mavenCentral(); gradlePluginPortal() }
+    dependencies { classpath 'com.android.tools.build:gradle:8.7.2' }
+}
+
+tasks.register('assembleDebug') {
+    group = 'build'
+    description = 'Build Lumi Guardian Code 13 debug APK for APK Factory.'
+    dependsOn ':guardian:assembleDebug'
+}
